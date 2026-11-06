@@ -1,0 +1,15 @@
+:root{--spring:cubic-bezier(.22,1,.36,1)}
+button,a,summary{-webkit-tap-highlight-color:transparent;touch-action:manipulation}
+button{transition:transform .35s var(--spring),background .25s ease,box-shadow .35s ease}
+button:active{transform:scale(.96)}
+@media(hover:hover){.cta:hover,.pill:hover{transform:translateY(-2px);box-shadow:0 8px 24px #0002}.amenity:hover{transform:translateY(-3px)}nav a:hover{opacity:.6}}
+.cta:active,.pill:active{transform:scale(.96)}
+.hero-photo img{animation:hero-settle 1.6s var(--spring) both}.hero-copy>*{animation:hero-rise .85s var(--spring) both}.hero-copy h1{animation-delay:.1s}.hero-copy .intro{animation-delay:.18s}.hero-copy .cta{animation-delay:.26s}.hero-copy .micro{animation-delay:.34s}
+@keyframes hero-settle{from{transform:scale(1.05);opacity:.7}to{transform:scale(1);opacity:1}}@keyframes hero-rise{from{opacity:0;translate:0 16px}to{opacity:1;translate:0 0}}
+.motion-reveal{opacity:0;translate:0 20px;transition:opacity .7s ease,translate .85s var(--spring)}.motion-reveal.is-visible{opacity:1;translate:0 0}
+.service,.amenity,.review,nav a{transition:transform .4s var(--spring),background .3s ease,opacity .3s ease}.service:before{transition:transform .8s var(--spring)}.service:active{transform:scale(.975)}
+.carousel-controls button:after{transition:background .3s ease,transform .4s var(--spring),width .4s var(--spring)}
+.faq details{overflow:hidden}.faq summary:after{content:'+';transition:transform .35s var(--spring)}.faq details[open] summary:after{content:'+';transform:rotate(45deg)}
+dialog{opacity:0;transform:translateY(20px) scale(.96);transition:opacity .25s ease,transform .4s var(--spring);box-shadow:0 25px 100px #0003}dialog.motion-open{opacity:1;transform:translateY(0) scale(1)}dialog::backdrop{background:#0000;backdrop-filter:blur(0);transition:background .3s ease,backdrop-filter .3s ease}dialog.motion-open::backdrop{background:#0006;backdrop-filter:blur(8px)}
+.mobile-cta{animation:dock-in .8s var(--spring) .4s both}@keyframes dock-in{from{translate:0 100%;opacity:0}to{translate:0 0;opacity:1}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}.motion-reveal{opacity:1;translate:none}dialog{transform:none}}
